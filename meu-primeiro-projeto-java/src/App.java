@@ -12,7 +12,12 @@ public class App {
                 case 1:
                     m.calcularIMC();
                     break;
-            
+                case 2:
+                    m.calcularMedia();
+                    break;
+                case 3:
+                    m.verificarTriangulo();
+                    break;
                 default:
                 System.out.println("Opção inválida!");
                     break;

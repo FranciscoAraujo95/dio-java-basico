@@ -6,13 +6,10 @@ public class Metodos {
     Scanner scanner = new Scanner(System.in);
 
     //Atribuos da classe
-    private int n1, n2, n3, media, escolha;
-    private float salario, peso, altura, imc;
+    private int escolha, lado1, lado2, lado3;
+    private float salario, peso, altura, imc, n1, n2, n3, media;
     
     //Métodos
-
-    
-
     //Exibe o menu para o usuário e lê o input dele
     public void mostrarMenu() {
         System.out.println("Informe a opção desejada");
@@ -23,6 +20,7 @@ public class Metodos {
         escolha = this.scanner.nextInt();
     }
 
+    //Calcula o IMC do usuário
     public void calcularIMC() {
         System.out.println("Peso: ");
         this.setPeso(this.scanner.nextFloat());
@@ -34,31 +32,84 @@ public class Metodos {
         System.out.println("IMC: " + String.format("%.2f", imc) + ".");
     }
 
+    public void calcularMedia() {
+        // return (n1 + n2 + n3) / 3;
+        System.out.println("Nota 1: ");
+        this.setN1(this.scanner.nextFloat());
+        System.out.println("Nota 2: ");
+        this.setN2(this.scanner.nextFloat());
+        System.out.println("Nota 3: ");
+        this.setN3(this.scanner.nextFloat());
+
+        media = (n1 + n2 + n3) / 3;
+
+        System.out.println("Media: " + String.format("%.2f", this.getMedia()));
+
+        if (media >= 7) {
+            if (media == 10) {
+                System.out.println("Aprovado com nota máxima!! Parabéns");
+            } else {
+                System.out.println("Aprovado.");
+            }
+        } else if (media < 5) {
+            System.out.println("Reprovado.");
+        } else {
+            System.out.println("Recuperação.");
+        }
+
+    }
+
+    //Verificar tipo de triângulo
+    public void verificarTriangulo() {
+        System.out.println("Lado 1: ");
+        this.setLado1(this.scanner.nextInt());
+        System.out.println("Lado 2: ");
+        this.setLado2(this.scanner.nextInt());
+        System.out.println("Lado 3: ");
+        this.setLado3(this.scanner.nextInt());
+
+        //Verificar se é um triangulo primeiramente
+        if ((lado1 > lado2 + lado3) || (lado2 > lado1 + lado3) || (lado3 > lado1 + lado2)) {
+            System.out.println("Não é um triângulo!!");
+        } else if (lado1 == lado2 && lado2 == lado3) {
+            //Equilátero - Todos os lados são iguais
+            System.out.println("Triângulo equilátero");
+        } else if ((lado1 == lado2) || (lado2 == lado3) || (lado3 == lado1)) {
+            //Isósceles - Dois lados iguais
+            System.out.println("Triângulo isósceles");
+        } else {
+            //Escaleno - Todos os lados são diferentes
+            System.out.println("Triângulo escaleno");
+        }
+    }
+
     //Getter & Setters
-    public int getN1() {
+    public float getN1() {
         return n1;
     }
-    public void setN1(int n1) {
+    public void setN1(float n1) {
         this.n1 = n1;
     }
-    public int getN2() {
+    public float getN2() {
         return n2;
     }
-    public void setN2(int n2) {
+    public void setN2(float n2) {
         this.n2 = n2;
     }
-    public int getN3() {
+    public float getN3() {
         return n3;
     }
-    public void setN3(int n3) {
+    public void setN3(float n3) {
         this.n3 = n3;
     }
-    public int getMedia() {
+    public float getMedia() {
         return media;
     }
-    public void setMedia(int media) {
+
+    public void setMedia(float media) {
         this.media = media;
     }
+
     public float getSalario() {
         return salario;
     }
@@ -100,6 +151,30 @@ public class Metodos {
 
     public void setEscolha(int escolha) {
         this.escolha = escolha;
+    }
+
+    public int getLado1() {
+        return lado1;
+    }
+
+    public void setLado1(int lado1) {
+        this.lado1 = lado1;
+    }
+
+    public int getLado2() {
+        return lado2;
+    }
+
+    public void setLado2(int lado2) {
+        this.lado2 = lado2;
+    }
+
+    public int getLado3() {
+        return lado3;
+    }
+
+    public void setLado3(int lado3) {
+        this.lado3 = lado3;
     }
 
     
