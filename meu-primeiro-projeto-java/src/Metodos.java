@@ -5,9 +5,36 @@ public class Metodos {
 
     Scanner scanner = new Scanner(System.in);
 
-    private int n1, n2, n3, media;
-    private float salario, peso, altura;
+    //Atribuos da classe
+    private int n1, n2, n3, media, escolha;
+    private float salario, peso, altura, imc;
     
+    //Métodos
+
+    
+
+    //Exibe o menu para o usuário e lê o input dele
+    public void mostrarMenu() {
+        System.out.println("Informe a opção desejada");
+        System.out.println("1 - Calcular IMC");
+        System.out.println("2 - Calcular Media");
+        System.out.println("3 - Verificar Triângulo");
+        System.out.println("Sua escolha: ");
+        escolha = this.scanner.nextInt();
+    }
+
+    public void calcularIMC() {
+        System.out.println("Peso: ");
+        this.setPeso(this.scanner.nextFloat());
+        System.out.println("Altura: ");
+        this.setAltura(this.scanner.nextFloat());
+
+        imc = peso / (float) (Math.pow(this.getAltura(), 2));
+
+        System.out.println("IMC: " + String.format("%.2f", imc) + ".");
+    }
+
+    //Getter & Setters
     public int getN1() {
         return n1;
     }
@@ -49,6 +76,30 @@ public class Metodos {
     }
     public void setAltura(float altura) {
         this.altura = altura;
+    }
+
+    public float getImc() {
+        return imc;
+    }
+
+    public void setImc(float imc) {
+        this.imc = imc;
+    }
+
+    public Scanner getScanner() {
+        return scanner;
+    }
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    public int getEscolha() {
+        return escolha;
+    }
+
+    public void setEscolha(int escolha) {
+        this.escolha = escolha;
     }
 
     
