@@ -83,6 +83,9 @@ public class Metodos {
         }
     }
 
+    //Receber e multiplicar salário
+
+
     //Getter & Setters
     public float getN1() {
         return n1;
