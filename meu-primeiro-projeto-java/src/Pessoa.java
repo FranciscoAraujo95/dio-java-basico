@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa extends Metodos{
 
     private String nome, sexo;
     private int idade;
