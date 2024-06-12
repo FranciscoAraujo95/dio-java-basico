@@ -25,12 +25,9 @@ public class App {
                 System.out.println("Opção inválida!");
                     break;
             }
-
             System.out.println("Deseja continuar? (S/N)");
             continuar = m.scanner.next().charAt(0);
         }
-
         System.out.println("Programa encerrado! Até mais!");
-        
     }
 }

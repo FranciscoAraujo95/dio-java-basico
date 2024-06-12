@@ -31,6 +31,7 @@ public class Metodos {
         System.out.println("IMC: " + String.format("%.2f", imc) + ".");
     }
 
+    //Calcular a média do usuário
     public void calcularMedia() {
         // return (n1 + n2 + n3) / 3;
         System.out.println("Nota 1: ");
