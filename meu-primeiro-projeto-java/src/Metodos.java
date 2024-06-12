@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
-
 public class Metodos {
-
     Scanner scanner = new Scanner(System.in);
 
     //Atribuos da classe
     private int escolha, lado1, lado2, lado3;
-    private float salario, peso, altura, imc, n1, n2, n3, media;
+    private float salario, percentual, valorInformado, peso, altura, imc, n1, n2, n3, media;
     
     //Métodos
     //Exibe o menu para o usuário e lê o input dele
@@ -16,6 +14,7 @@ public class Metodos {
         System.out.println("1 - Calcular IMC");
         System.out.println("2 - Calcular Media");
         System.out.println("3 - Verificar Triângulo");
+        System.out.println("4 - Calcular salário");
         System.out.println("Sua escolha: ");
         escolha = this.scanner.nextInt();
     }
@@ -84,7 +83,28 @@ public class Metodos {
     }
 
     //Receber e multiplicar salário
+    public void calcularSalario() {
+        System.out.println("Informe o seu salário: ");
+        this.setSalario(this.scanner.nextFloat());
+        
+        System.out.println("Salário atual: R$" + String.format("%.2f", this.getSalario()) + ".");
+        System.out.println("Deseja aplicar um acréscimo? (1 - Sim / 0 - Não)");
 
+        escolha = this.scanner.nextInt();
+        if (escolha == 1) {
+            System.out.println("Digite o percentual de acréscimo: ");
+            valorInformado = this.scanner.nextFloat();
+
+            //Calculando o percentual
+            percentual = valorInformado / 100;
+
+            System.out.println("Seu salário acrescido é: R$" + String.format("%.2f", this.salario + (salario * percentual)) + ".");
+
+        } else {
+            System.out.println("Até mais!");
+        }
+
+    }
 
     //Getter & Setters
     public float getN1() {
@@ -180,6 +200,23 @@ public class Metodos {
         this.lado3 = lado3;
     }
 
+    public float getPercentual() {
+        return percentual;
+    }
+
+    public void setPercentual(float percentual) {
+        this.percentual = percentual;
+    }
+
+    public float getValorInformado() {
+        return valorInformado;
+    }
+
+    public void setValorInformado(float valorInformado) {
+        this.valorInformado = valorInformado;
+    }
+
+    
     
 
 }

@@ -18,6 +18,9 @@ public class App {
                 case 3:
                     m.verificarTriangulo();
                     break;
+                case 4:
+                    m.calcularSalario();
+                    break;
                 default:
                 System.out.println("Opção inválida!");
                     break;
