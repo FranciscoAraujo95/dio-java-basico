@@ -2,8 +2,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
+        //Instanciando objetos
         Pessoa p = new Pessoa("", "", 0);
         Metodos m = new Metodos();
+
+        System.out.println("Seja bem-vindo!!");
+        System.out.println("Informe o seu nome: ");
+        p.setNome(m.scanner.nextLine());
 
         char continuar = 'S';
         while (continuar == 'S' || continuar == 's') {

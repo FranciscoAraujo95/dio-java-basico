@@ -1,14 +1,17 @@
 public class Pessoa extends Metodos{
-
+    
+    //Atributos
     private String nome, sexo;
     private int idade;
 
+   //Construtor 
     public Pessoa(String nome, String sexo, int idade) {
         this.nome = nome;
         this.sexo = sexo;
         this.idade = idade;
     }
 
+    //Getters & Setters
     public String getNome() {
         return nome;
     }

@@ -107,7 +107,7 @@ public class Metodos {
 
     }
 
-    //Getter & Setters
+    //Getters & Setters
     public float getN1() {
         return n1;
     }
@@ -216,8 +216,4 @@ public class Metodos {
     public void setValorInformado(float valorInformado) {
         this.valorInformado = valorInformado;
     }
-
-    
-    
-
 }
